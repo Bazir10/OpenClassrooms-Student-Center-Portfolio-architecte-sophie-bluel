@@ -1,42 +1,54 @@
 // tretement des works //
 fetch("http://localhost:5678/api/works")
 .then(response => response.json())
-.then(reponse => {
+.then(works => {
 
-    console.log(r)
+    console.log(works)
+
+    for (let work of works) {
+        alert(work);
+    }
 })
 
-
+/*
 // tretement des categories //
 fetch("http://localhost:5678/api/categories")
-.then(body => console.log(body)) {
+.then(body =>  {
     var element = document.getElementById(portfolio).innerText = "Mes Projets";
 
-var element = document.getElementById(contact).innerText = "contact";
+var element1 = document.getElementById(contact).innerText = "contact";
 
-var element = document.getElementById(name).addEventListener("click", function () {
+var element2 = document.getElementById(name).addEventListener("click", function () {
     alert("vous avez cliqué !");
 });
-var element = document.getElementById(email).addEventListener("click", function () {
+var element3 = document.getElementById(email).addEventListener("click", function () {
     alert("vous avez cliqué !");
 });
-var element = document.getElementById(message).addEventListener("click", function () {
+var element4 = document.getElementById(message).addEventListener("click", function () {
     alert("vous avez cliqué !");
 });
-    console.log(reponse.json())
-}
+console.log(body.json())
+
+})
+    
+    let set = new Set ()
+
+    let portfolio = { name: "portfolio" };
+    let contact = { name: "contact" };
+    let name = { name: "name" };
+    let email = { name: "email" };
+    let message = { name: "message" };
+
+    set.add(portfolio);
+    set.add(contact);
+    set.add(name);
+    set.add(email);
+    set.add(message);
+
+    alert( set.size );
+    for (let user of set) {
+        alert(user.name);
+    }
 
 
-let set = new Set
-
-let portfolio = { name: "portfolio" };
-let contact = { name: "contact" };
-let name = { name: "name" };
-let email = { name: "email" };
-let message = { name: "message" };
-
-alert( set.size );
-
-for (let user of set) {
-    alert(user.name);
-}
+*/
