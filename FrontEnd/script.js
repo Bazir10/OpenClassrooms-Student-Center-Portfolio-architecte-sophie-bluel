@@ -4,9 +4,16 @@ fetch("http://localhost:5678/api/works")
 .then(works => {
 
     console.log(works)
-
+    var gallery = document.getElementById("gallery");
+    gallery.innerHTML=``
     for (let work of works) {
-        alert(work);
+        console.log(work);
+        gallery.innerHTML += `
+        <h2>${work.title}</h2>
+        <h3>${work.id}</h3>
+        `
+       
+
     }
 })
 
