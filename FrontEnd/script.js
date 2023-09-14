@@ -12,7 +12,7 @@ fetch("http://localhost:5678/api/works")
         <h2>${work.title}</h2>
         <h3>${work.id}</h3>
         `
-       
+
 
     }
 })
@@ -37,7 +37,7 @@ var element4 = document.getElementById(message).addEventListener("click", functi
 console.log(body.json())
 
 })
-    
+
     let set = new Set ()
 
     let portfolio = { name: "portfolio" };
