@@ -1,4 +1,4 @@
-// tretement des works //
+// traitement des works //
 fetch("http://localhost:5678/api/works")
 .then(response => response.json())
 .then(works => {
@@ -9,8 +9,10 @@ fetch("http://localhost:5678/api/works")
     for (let work of works) {
         console.log(work);
         gallery.innerHTML += `
-        <h2>${work.title}</h2>
-        <h3>${work.id}</h3>
+        <figure>
+            <img src="${work.imageUrl}" alt="${work.title}">
+            <figcaption>${work.title}</figcaption>
+        </figure>
         `
 
 
